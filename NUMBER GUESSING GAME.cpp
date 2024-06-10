@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
+using namespace std;
 int main() {
 
      srand(time(0));
@@ -12,19 +12,19 @@ int main() {
     int guess;
     int attempts = 0;
 
-    std::cout << "Welcome to the Guessing Game!\n";
-    std::cout << "Try to guess the number between 1 and 100.\n\n";
+    cout << "Welcome to the Guessing Game!\n";
+    cout << "Try to guess the number between 1 and 100.\n\n";
 
     do {
         // Prompt user for guess
-        std::cout << "Enter your guess: ";
-        std::cin >> guess;
+        cout << "Enter your guess: ";
+        cin >> guess;
 
         // Check if the guess is too high, too low, or correct
         if (guess > randomNumber) {
-            std::cout << "Too high! Try again.\n";
+            cout << "Too high! Try again.\n";
         } else if (guess < randomNumber) {
-            std::cout << "Too low! Try again.\n";
+            cout << "Too low! Try again.\n";
         }
 
         attempts++;
@@ -32,7 +32,7 @@ int main() {
     } while (guess != randomNumber);
 
     // Congratulate the user on guessing the correct number
-    std::cout << "\nCongratulations! You guessed the number " << randomNumber << " correctly in " << attempts << " attempts.\n";
+    cout << "\nCongratulations! You guessed the number " << randomNumber << " correctly in " << attempts << " attempts.\n";
 
     return 0;
 }
